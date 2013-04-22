@@ -1,0 +1,14 @@
+TODO
+
+- Consider adding a FrameHandle member to every FrameProcessor or FrameProvider
+  directly. FrameProcessor should perform a default copy of the source handle
+  to avoid errors. A protected method like getVideoProps() should update the
+  current handle with correct values? A protected method between every
+  requestNextFrame() call should update PTS or similar changing values;
+- Consider doing a proper infrastructure for getting exact or estimated frame numbers/
+  lenght of the videos. It could be a couple of properties in VideoProps like
+  bool ProvideExactFrameN, long ExactFrameN with some external methods to get
+  the exact frame number if possible or get an estimation;
+- GetExpectedProvider shoul work properly with a VideoProps with Width and Height setted
+  to -1 or PixelFormat setted to ANY or DONTCARE. Local frame handles of FrameProcessors
+  (or FrameProvider) should continue to contain the correct value.

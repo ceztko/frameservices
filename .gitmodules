@@ -1,0 +1,3 @@
+[submodule "ext/persistence"]
+	path = ext/persistence
+	url = git://github.com/ceztko/persistence.git
